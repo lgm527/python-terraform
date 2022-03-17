@@ -153,8 +153,8 @@ class Terraform:
         """
         default = kwargs.copy()
         default["auto-approve"] = auto_approve
-        default.pop("force", None)
         options = self._generate_default_options(default)
+        options.pop("force", None)
         args = self._generate_default_args(dir_or_plan)
         return self.cmd("destroy", *args, **options)
 
