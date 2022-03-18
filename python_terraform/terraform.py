@@ -153,7 +153,7 @@ class Terraform:
         """
         default = kwargs.copy()
         default["auto-approve"] = auto_approve
-        default["force"] = None
+        # default["force"] = None
         options = self._generate_default_options(default)
         print("options", options)
         args = self._generate_default_args(dir_or_plan)
